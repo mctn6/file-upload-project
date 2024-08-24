@@ -47,6 +47,10 @@ export default {
         this.imageUrl = URL.createObjectURL(this.file)
       }
     },
+    resetForm(){
+      this.file = null;
+      this.imageUrl = null;
+    },
     async uploadImage() {
       if (!this.file) return
 
@@ -65,6 +69,7 @@ export default {
         this.snackbarText = 'Image uploaded successfully!'
         this.snackbarColor = 'success'
         this.snackbar = true
+     
       } catch (error) {
         console.error('Upload failed:', error)
         this.snackbarText = 'Failed to upload image. Please try again.'
@@ -72,6 +77,7 @@ export default {
         this.snackbar = true
       } finally {
         this.loading = false
+        this.resetForm()
       }
     },
   },
