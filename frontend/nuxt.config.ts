@@ -14,6 +14,11 @@ export default defineNuxtConfig({
       })
     },
   ],
+  runtimeConfig: {
+    public: {
+      baseAPI: process.env.BASE_API
+    }
+  },
   vite: {
     vue: {
       template: {
