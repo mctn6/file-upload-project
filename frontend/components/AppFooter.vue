@@ -2,7 +2,6 @@
     <v-footer
       color="primary"
       dark
-      class="pa-4"
     >
       <v-container>
         <v-row justify="center">
