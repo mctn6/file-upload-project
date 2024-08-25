@@ -4,10 +4,10 @@ const File = require('../models/file');
 const fs = require('fs');
 
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
+  destination: (_req, _file, cb) => {
     cb(null, 'uploads/');
   },
-  filename: (req, file, cb) => {
+  filename: (_req, file, cb) => {
     cb(null, Date.now() + path.extname(file.originalname));
   },
 });
@@ -37,7 +37,7 @@ exports.uploadFile = [
   },
 ];
 
-exports.getUploadedFiles = async (req, res) => {
+exports.getUploadedFiles = async (_req, res) => {
   try {
     const files = await File.find();
     res.status(200).json(files);
@@ -51,7 +51,7 @@ exports.downloadFile = async (req, res) => {
     const fileName = req.params.fileName;
     const uploadDir = path.join(__dirname, '..', 'uploads'); 
     const filePath = path.join(uploadDir, fileName);
-
+    
     if (!fs.existsSync(filePath)) {
       return res.status(404).json({ message: 'File not found' });
     }

@@ -1,28 +1,39 @@
 <template>
-    <v-footer app color="primary" dark padless>
-      <v-row justify="center" no-gutters>
-        <v-btn
-          v-for="link in links"
-          :key="link"
-          color="white"
-          text
-          rounded
-          class="my-2"
-        >
-          {{ link }}
-        </v-btn>
-        <v-col class="primary py-4 text-center white--text" cols="12">
-          {{ new Date().getFullYear() }} — <strong>Image Upload App</strong>
-        </v-col>
-      </v-row>
+    <v-footer
+      color="primary"
+      app
+      dark
+      class="pa-4"
+    >
+      <v-container>
+        <v-row justify="center">
+          <v-col
+            cols="12"
+            class="text-center"
+          >
+            <p class="white--text mb-0">
+              © {{ new Date().getFullYear() }} File Upload. All rights reserved.
+            </p>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-footer>
-  </template>
-  
-  <script>
-  export default {
-    name: 'AppFooter',
-    data: () => ({
-      links: ['Home', 'About Us', 'Team', 'Services', 'Blog', 'Contact Us'],
-    }),
+</template>
+
+<script>
+export default {
+  data() {
+    return {};
   }
-  </script>
+};
+</script>
+
+<style scoped>
+.v-footer {
+  background-color: #2a2a2a;
+}
+
+.v-list-item-title {
+  font-weight: 500;
+}
+</style>

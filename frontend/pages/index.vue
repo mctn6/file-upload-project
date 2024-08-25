@@ -13,6 +13,7 @@
 import ImageUpload from '@/components/ImageUpload.vue'
 
 export default {
+  layout: 'default',
   components: {
     ImageUpload,
   },

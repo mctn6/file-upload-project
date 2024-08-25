@@ -1,6 +1,6 @@
 <template>
   <v-card class="mx-auto">
-    <v-card-title>Upload Image {{ $config.hello }}</v-card-title>
+    <v-card-title>Upload Image</v-card-title>
     <v-card-text>
       <v-file-input
         v-model="file"
@@ -26,7 +26,7 @@
     </v-snackbar>
 
     <!-- User Uploads List -->
-    <v-card-title>Your Uploads</v-card-title>
+    <v-card-title v-if="userUploads.length > 0">Your Uploads</v-card-title>
     <v-list>
       <v-list-item
         v-for="upload in userUploads"
