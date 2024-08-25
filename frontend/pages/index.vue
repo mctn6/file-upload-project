@@ -70,6 +70,7 @@
                       icon="mdi-download"
                       variant="text"
                       @click="downloadImage(upload)"
+                      :loading="loading"
                     ></v-btn>
                   </template>
                 </v-list-item>
@@ -122,7 +123,7 @@ export default {
       if (!this.file) return;
       this.loading = true;
       const formData = new FormData();
-      formData.append("image", this.file);
+      formData.append("file", this.file);
       try {
         const response = await axios.post(
           `${this.$config.public.baseAPI}/upload`,
@@ -149,12 +150,13 @@ export default {
       } finally {
         this.loading = false;
         this.resetForm();
+        this.fetchUserUploads();
       }
     },
     async fetchUserUploads() {
       try {
         const response = await axios.get(
-          `${this.$config.public.baseAPI}/files`
+          `${this.$config.public.baseAPI}/list`
         );
         this.userUploads = response.data;
       } catch (error) {
@@ -165,7 +167,7 @@ export default {
       }
     },
     async downloadImage(image) {
-      const imagePath = image.path?.split("\\").pop();
+      const imagePath = image.id;
 
       try {
         const response = await axios.get(
