@@ -1,10 +1,11 @@
 {
-  "name": "backend",
+  "name": "file-upload-project-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-     "test": "jest"
+     "test": "jest",
+     "vercel-build": "echo hello"
   },
   "keywords": [],
   "author": "",
