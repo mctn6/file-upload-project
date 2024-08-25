@@ -1,7 +1,6 @@
 <template>
     <v-footer
       color="primary"
-      app
       dark
       class="pa-4"
     >
@@ -21,11 +20,7 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {};
-  }
-};
+
 </script>
 
 <style scoped>
