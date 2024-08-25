@@ -23,3 +23,7 @@ body {
 .custom-btn:hover {
   opacity: 0.8;
 }
+
+.empty-list {
+  margin-left: 2rem;
+}

@@ -55,14 +55,10 @@
               </v-snackbar>
             </v-card>
           </v-col>
-        </v-row>
-        <v-row>
           <v-col cols="12" sm="12" md="6">
-            <v-card v-if="userUploads.length > 0">
-              <v-card-title 
-                >Your Uploads</v-card-title
-              >
-              <v-list>
+            <v-card>
+              <v-card-title>Your Uploads</v-card-title>
+              <v-list v-if="userUploads.length > 0">
                 <v-list-item
                   v-for="upload in userUploads"
                   :key="upload.id"
@@ -78,6 +74,13 @@
                   </template>
                 </v-list-item>
               </v-list>
+              <v-list v-else>
+                <v-list-item>
+                  <v-list-item-title class="d-flex align-center justify-center">
+                    <span class="text-grey">No uploads available</span>
+                  </v-list-item-title>
+                </v-list-item>
+              </v-list>
             </v-card>
           </v-col>
         </v-row>
@@ -88,13 +91,9 @@
 
 <script>
 import axios from "axios";
-import ImageUpload from "@/components/ImageUpload.vue";
 
 export default {
   layout: "default",
-  components: {
-    ImageUpload,
-  },
   data() {
     return {
       file: null,
@@ -106,7 +105,7 @@ export default {
       userUploads: [],
     };
   },
-  ounted() {
+  mounted() {
     this.fetchUserUploads();
   },
   methods: {
