@@ -12,7 +12,7 @@
             class="text-center"
           >
             <p class="white--text mb-0">
-              © {{ new Date().getFullYear() }} File Upload. All rights reserved.
+              © {{ new Date().getFullYear() }} Image Upload App. All rights reserved.
             </p>
           </v-col>
         </v-row>

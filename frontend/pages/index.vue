@@ -1,9 +1,9 @@
 <template>
   <v-container>
     <v-row justify="center" align="center">
-      <v-col cols="12" sm="8" md="6">
-        <h1 class="text-center mb-4">Image Upload Demo</h1>
-        <image-upload></image-upload>
+      <v-col cols="12" sm="12">
+        <h1 className="text-center pb-2">Image Upload Demo</h1>
+        <image-upload />
       </v-col>
     </v-row>
   </v-container>

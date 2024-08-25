@@ -2,11 +2,14 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
-  modules: ["@nuxt/typescript-build"],
+  modules: ["@nuxt/typescript-build", 'nuxt-mdi'],
   devtools: { enabled: true },
   build: {
     transpile: ['vuetify'],
   },
+  buildModules: [
+    '@nuxtjs/vuetify',
+  ],
   modules: [
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -15,6 +18,12 @@ export default defineNuxtConfig({
       })
     },
   ],
+  vuetify: {
+    defaultAssets: {
+      font: true,
+      icons: 'mdi'
+    }
+  },
   runtimeConfig: {
     public: {
       baseAPI: process.env.BASE_API
@@ -28,6 +37,7 @@ export default defineNuxtConfig({
     },
   },
   css: [
-    '~/assets/css/app.css'
+    '~/assets/css/app.css',
+    '@mdi/font/css/materialdesignicons.min.css'
   ],
 })
