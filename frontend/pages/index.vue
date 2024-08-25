@@ -36,7 +36,7 @@
                   @click="uploadImage"
                   :disabled="!file"
                   :loading="loading"
-                  class="custom-btn"
+                  variant="outlined"
                 >
                   Upload
                 </v-btn>
@@ -45,7 +45,7 @@
                   @click="resetForm"
                   :disabled="!file"
                   :loading="loading"
-                  class="custom-btn"
+                   variant="outlined"
                 >
                   Remove
                 </v-btn>

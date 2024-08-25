@@ -14,16 +14,3 @@ body {
   width: 100%;
   font-family: "Nunito", sans-serif; 
 }
-
-
-.pb-2 {
-  padding-bottom: 2rem;
-}
-
-.custom-btn:hover {
-  opacity: 0.8;
-}
-
-.empty-list {
-  margin-left: 2rem;
-}
