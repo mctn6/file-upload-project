@@ -55,7 +55,8 @@ Before you start, make sure you have the following installed:
     ```
 
 ### Frontend Setup
-1,  Navigate to the `frontend` folder:
+
+1.  Navigate to the `frontend` folder:
     ```bash
     cd frontend
     ```
@@ -81,7 +82,7 @@ Before you start, make sure you have the following installed:
     ```bash
     BASE_API=
     ```
-    
+
 5.  Open the frontend in your browser:
     ```bash
     open http://localhost:3000
