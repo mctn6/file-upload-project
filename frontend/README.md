@@ -76,3 +76,9 @@ Before you start, make sure you have the following installed:
     ```bash
     open http://localhost:3000
     ```
+
+## Deployment
+
+The project has already been deployed and is available for viewing at the following URL:
+
+https://file-upload-project-frontend.vercel.app/
