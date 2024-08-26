@@ -26,10 +26,12 @@ Before you start, make sure you have the following installed:
     ```bash
     cd backend
     ```
+
 2. Install the backend dependencies:
     ```bash
     npm install
     ```
+
 3.  Create a `.env` file in the root directory of the project and add the following environment variables:
     ```bash
     PORT=
@@ -44,7 +46,9 @@ Before you start, make sure you have the following installed:
     ```bash
     npm run dev
     ```
+
     or
+
     ```bash
     npm run build
     npm run start
@@ -55,23 +59,29 @@ Before you start, make sure you have the following installed:
     ```bash
     cd frontend
     ```
+
 2. Install the frontend dependencies:
     ```bash
     npm install
     ``` 
+
 3.  Start the frontend:
     ```bash
     npm run dev
     ```
+
     or
+
     ```bash
     npm run build
     npm run start
     ```
+
 4.  Configure environment variables if needed (create a `.env` file in the root directory of the project and add the following environment variables):
     ```bash
     BASE_API=
     ```
+    
 5.  Open the frontend in your browser:
     ```bash
     open http://localhost:3000
