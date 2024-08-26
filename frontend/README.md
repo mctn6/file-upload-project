@@ -1,75 +1,78 @@
-# Nuxt 3 Minimal Starter
+# Image Upload App
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Overview
 
-## Setup
+This project consists of two main components:
 
-Make sure to install the dependencies:
+-   **Backend:** An Express.js server
+-   **Frontend:** A Nuxt.js application
 
-```bash
-# npm
-npm install
+This README will guide you through the setup, development, and deployment of both components.
 
-# pnpm
-pnpm install
+## Prerequisites
 
-# yarn
-yarn install
+Before you start, make sure you have the following installed:
 
-# bun
-bun install
-```
+-   [Node.js](https://nodejs.org/) (v12.x or higher)
+-   [npm](https://www.npmjs.com/) (comes with Node.js)
+-   [Git](https://git-scm.com/)
 
-## Development Server
 
-Start the development server on `http://localhost:3000`:
+## Getting Started
 
-```bash
-# npm
-npm run dev
+### Backend Setup
 
-# pnpm
-pnpm run dev
+1.  Navigate to the `backend` folder:
+    ```bash
+    cd backend
+    ```
+2. Install the backend dependencies:
+    ```bash
+    npm install
+    ```
+3.  Create a `.env` file in the root directory of the project and add the following environment variables:
+    ```bash
+    PORT=
+    GD_FOLDER_ID=
+    GOOGLE_API_KEY_BASE64=
+    ```
+    -   `PORT`: The port number on which the server will run.
+    -   `GD_FOLDER_ID`: The Google Drive folder ID where the uploaded images will be stored.
+    -   `GOOGLE_API_KEY_BASE64`: The base64 encoded Google API key.
 
-# yarn
-yarn dev
+4.  Start the server:
+    ```bash
+    npm run dev
+    ```
+    or
+    ```bash
+    npm run build
+    npm run start
+    ```
 
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+### Frontend Setup
+1,  Navigate to the `frontend` folder:
+    ```bash
+    cd frontend
+    ```
+2. Install the frontend dependencies:
+    ```bash
+    npm install
+    ``` 
+3.  Start the frontend:
+    ```bash
+    npm run dev
+    ```
+    or
+    ```bash
+    npm run build
+    npm run start
+    ```
+4.  Configure environment variables if needed (create a `.env` file in the root directory of the project and add the following environment variables):
+    ```bash
+    BASE_API=
+    ```
+5.  Open the frontend in your browser:
+    ```bash
+    open http://localhost:3000
+    ```
